@@ -1,4 +1,16 @@
 declare namespace templates {
+    class DoTTemplateContainer extends HTMLTemplateContainer {
+        constructor(name: string, template: string);
+        compile(html: string, ctx: Object): string;
+    }
+}
+declare namespace templates {
+    class EJSTemplateContainer extends HTMLTemplateContainer {
+        constructor(name: string, template: string);
+        compile(html: string, ctx: Object): string;
+    }
+}
+declare namespace templates {
     class MustacheTemplateContainer extends HTMLTemplateContainer {
         constructor(name: string, template: string);
         compile(html: string, ctx: Object): string;
