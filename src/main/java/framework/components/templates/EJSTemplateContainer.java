@@ -18,7 +18,7 @@ public class EJSTemplateContainer extends HTMLTemplateContainer{
 		if (ejs != null) {
 			rendered = (String) invokeFunction(ejs, "render", html, ctx);
 		} 
-		
+		 
 		return rendered;
 	}
 
