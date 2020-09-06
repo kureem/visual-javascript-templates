@@ -12,9 +12,18 @@
  </target>
 	
 	<target name="package">
-		<copy file="src\\main\\resources\\META-INF\\resources\\webjars\\grapes\\1.0.0-SNAPSHOT\bundle.js"
-		 										tofile="C:\\xampp\\htdocs\\cart\\admin\\view\\javascript\\cart.js" verbose="true" />
-		 
+		<copy file="C:\\gitvjs\\visual-javascript-templates\\src\\main\\resources\\META-INF\\resources\\webjars\\templates\\1.0.0-SNAPSHOT\bundle.js"
+		 										tofile="C:\\gitvjs\\demo\\src\\main\\resources\\META-INF\\resources\\webjars\\demo\\1.0.0-SNAPSHOT\templates.js" verbose="true" />
+		
+		<copy file="C:\\gitvjs\\visual-javascript-bootstrap\\src\\main\\resources\\META-INF\\resources\\webjars\\bootstrap\\1.0.0-SNAPSHOT\bundle.js"
+				 										tofile="C:\\gitvjs\\demo\\src\\main\\resources\\META-INF\\resources\\webjars\\demo\\1.0.0-SNAPSHOT\bootstrap.js" verbose="true" />
+		
+		<copy file="C:\\gitvjs\\visual-javascript-engine\\src\\main\\resources\\META-INF\\resources\\webjars\\engine\\1.0.0-SNAPSHOT\bundle.js"
+				 										tofile="C:\\gitvjs\\demo\\src\\main\\resources\\META-INF\\resources\\webjars\\demo\\1.0.0-SNAPSHOT\engine.js" verbose="true" />
+				
+		<copy file="C:\\gitvjs\\visual-javascript-editor\\src\\main\\resources\\META-INF\\resources\\webjars\\veditor\\1.0.0-SNAPSHOT\bundle.js"
+						 										tofile="C:\\gitvjs\\demo\\src\\main\\resources\\META-INF\\resources\\webjars\\demo\\1.0.0-SNAPSHOT\veditor.js" verbose="true" />
+				
 	</target>
   
 </project>
