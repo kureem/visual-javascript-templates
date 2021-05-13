@@ -3,7 +3,6 @@ package framework.components.templates;
 import static jsweet.dom.Globals.window;
 
 import framework.components.HTMLTemplateContainer;
-import jsweet.lang.Function;
 import jsweet.lang.Object;
 
 public class JSRenderTemplateContainer extends HTMLTemplateContainer{
