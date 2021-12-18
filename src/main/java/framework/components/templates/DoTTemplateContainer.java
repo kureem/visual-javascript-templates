@@ -15,6 +15,7 @@ public class DoTTemplateContainer extends HTMLTemplateContainer{
 	
 	public String compile(String html, Object ctx) {
 		String rendered = html;
+		
 		Object doT = (Object) window.$get("doT");
 		if (doT != null) {
 			Function templ = (Function) invokeFunction(doT, "template", html);

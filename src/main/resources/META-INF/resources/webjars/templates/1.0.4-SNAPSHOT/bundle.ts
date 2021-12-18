@@ -1,14 +1,14 @@
-/* Generated from Java with JSweet 2.3.0 - http://www.jsweet.org */
+/* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 class DoTTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let doT : Object = <Object>window["doT"];
-        if(doT != null) {
-            let templ : Function = <Function>HTMLTemplateContainer.invokeFunction(doT, "template", html);
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const doT: Object = <Object>window["doT"];
+        if (doT != null){
+            const templ: Function = <Function>HTMLTemplateContainer.invokeFunction(doT, "template", html);
             rendered = <string>templ.call(templ, ctx);
         }
         return rendered;
@@ -20,14 +20,14 @@ DoTTemplateContainer["__interfaces"] = ["framework.components.api.Renderable","f
 
 
 class EJSTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let ejs : Object = <Object>window["ejs"];
-        if(ejs != null) {
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const ejs: Object = <Object>window["ejs"];
+        if (ejs != null){
             rendered = <string>HTMLTemplateContainer.invokeFunction(ejs, "render", html, ctx);
         }
         return rendered;
@@ -39,15 +39,15 @@ EJSTemplateContainer["__interfaces"] = ["framework.components.api.Renderable","f
 
 
 class JSRenderTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let jsrender : Object = <Object>window["jsrender"];
-        if(jsrender != null) {
-            let templ : Object = <Object>HTMLTemplateContainer.invokeFunction(jsrender, "templates", html);
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const jsrender: Object = <Object>window["jsrender"];
+        if (jsrender != null){
+            const templ: Object = <Object>HTMLTemplateContainer.invokeFunction(jsrender, "templates", html);
             rendered = <string>HTMLTemplateContainer.invokeFunction(templ, "render", ctx);
         }
         return rendered;
@@ -59,14 +59,14 @@ JSRenderTemplateContainer["__interfaces"] = ["framework.components.api.Renderabl
 
 
 class MustacheTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let mustache : Object = <Object>window["Mustache"];
-        if(mustache != null) {
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const mustache: Object = <Object>window["Mustache"];
+        if (mustache != null){
             rendered = <string>HTMLTemplateContainer.invokeFunction(mustache, "render", html, ctx);
         }
         return rendered;
@@ -78,7 +78,7 @@ MustacheTemplateContainer["__interfaces"] = ["framework.components.api.Renderabl
 
 
 class NunjucksTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
@@ -88,10 +88,10 @@ class NunjucksTemplateContainer extends HTMLTemplateContainer {
      * @param {Object} ctx
      * @return {string}
      */
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let nunjucks : Object = <Object>window["nunjucks"];
-        if(nunjucks != null) {
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const nunjucks: Object = <Object>window["nunjucks"];
+        if (nunjucks != null){
             rendered = <string>HTMLTemplateContainer.invokeFunction(nunjucks, "renderString", html, ctx);
         }
         return rendered;
@@ -103,14 +103,14 @@ NunjucksTemplateContainer["__interfaces"] = ["framework.components.api.Renderabl
 
 
 class SqrlTemplateContainer extends HTMLTemplateContainer {
-    public constructor(name : string, template : string) {
+    public constructor(name: string, template: string) {
         super(name, template);
     }
 
-    public compile(html : string, ctx : Object) : string {
-        let rendered : string = html;
-        let Sqrl : Object = <Object>window["Sqrl"];
-        if(Sqrl != null) {
+    public compile(html: string, ctx: Object): string {
+        let rendered: string = html;
+        const Sqrl: Object = <Object>window["Sqrl"];
+        if (Sqrl != null){
             rendered = <string>HTMLTemplateContainer.invokeFunction(Sqrl, "render", html, ctx);
         }
         return rendered;

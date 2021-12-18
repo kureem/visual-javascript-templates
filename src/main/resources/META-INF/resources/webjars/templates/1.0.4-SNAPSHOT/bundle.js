@@ -1,13 +1,13 @@
-/* Generated from Java with JSweet 2.3.0 - http://www.jsweet.org */
+/* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 class DoTTemplateContainer extends HTMLTemplateContainer {
     constructor(name, template) {
         super(name, template);
     }
     compile(html, ctx) {
         let rendered = html;
-        let doT = window["doT"];
+        const doT = window["doT"];
         if (doT != null) {
-            let templ = HTMLTemplateContainer.invokeFunction(doT, "template", html);
+            const templ = HTMLTemplateContainer.invokeFunction(doT, "template", html);
             rendered = templ.call(templ, ctx);
         }
         return rendered;
@@ -21,7 +21,7 @@ class EJSTemplateContainer extends HTMLTemplateContainer {
     }
     compile(html, ctx) {
         let rendered = html;
-        let ejs = window["ejs"];
+        const ejs = window["ejs"];
         if (ejs != null) {
             rendered = HTMLTemplateContainer.invokeFunction(ejs, "render", html, ctx);
         }
@@ -36,9 +36,9 @@ class JSRenderTemplateContainer extends HTMLTemplateContainer {
     }
     compile(html, ctx) {
         let rendered = html;
-        let jsrender = window["jsrender"];
+        const jsrender = window["jsrender"];
         if (jsrender != null) {
-            let templ = HTMLTemplateContainer.invokeFunction(jsrender, "templates", html);
+            const templ = HTMLTemplateContainer.invokeFunction(jsrender, "templates", html);
             rendered = HTMLTemplateContainer.invokeFunction(templ, "render", ctx);
         }
         return rendered;
@@ -52,7 +52,7 @@ class MustacheTemplateContainer extends HTMLTemplateContainer {
     }
     compile(html, ctx) {
         let rendered = html;
-        let mustache = window["Mustache"];
+        const mustache = window["Mustache"];
         if (mustache != null) {
             rendered = HTMLTemplateContainer.invokeFunction(mustache, "render", html, ctx);
         }
@@ -73,7 +73,7 @@ class NunjucksTemplateContainer extends HTMLTemplateContainer {
      */
     compile(html, ctx) {
         let rendered = html;
-        let nunjucks = window["nunjucks"];
+        const nunjucks = window["nunjucks"];
         if (nunjucks != null) {
             rendered = HTMLTemplateContainer.invokeFunction(nunjucks, "renderString", html, ctx);
         }
@@ -88,7 +88,7 @@ class SqrlTemplateContainer extends HTMLTemplateContainer {
     }
     compile(html, ctx) {
         let rendered = html;
-        let Sqrl = window["Sqrl"];
+        const Sqrl = window["Sqrl"];
         if (Sqrl != null) {
             rendered = HTMLTemplateContainer.invokeFunction(Sqrl, "render", html, ctx);
         }
